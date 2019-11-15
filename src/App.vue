@@ -1,20 +1,7 @@
 <template>
   <div id="app">
     <div class="container">
-    <b-table :data="message" focusable>
-      <template slot-scope="props">
-        <b-table-column field="id" label="ID" width="40" numeric>{{ props.row.id }}</b-table-column>
-        <b-table-column field="title" label="Title">{{ props.row.title }}</b-table-column>
-        <b-table-column field="body" label="Body">{{ props.row.body }}</b-table-column>
-      </template>
-      <template slot="empty">
-        <section class="section">
-          <div class="content has-text-grey has-text-centered">
-            <p>Nothing here.</p>
-          </div>
-        </section>
-      </template>
-    </b-table>
+      <b-table :data="message" :columns="columns"></b-table>
     </div>
   </div>
 </template>
@@ -24,14 +11,17 @@ export default {
   name: 'app',
   data() {
     return {
-      message: []
+      message: [],
+      columns: [{field: 'id', label: 'ID'},
+        {field: 'title', label: 'Title',},
+      ]
     }
   },
   components: {
   },
   methods:{
     fetchSomeData(){
-      fetch('https://jsonplaceholder.typicode.com/posts', {
+      fetch('https://jsonplaceholder.typicode.com/todos', {
         method: 'GET'
       })
       .then(response => response.json())
