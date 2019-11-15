@@ -13,8 +13,8 @@ export default {
     return {
       message: [],
       columns: [{field: 'id', label: 'ID'},
-        {field: 'title', label: 'Title',},
-      ]
+                {field: 'title', label: 'Title',},
+               ]
     }
   },
   components: {
