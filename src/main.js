@@ -9,8 +9,10 @@ import App from './App.vue'
 
 // To use table the features
 import Table from 'buefy/dist/components/table'
+import Button from 'buefy/dist/components/button'
 import 'buefy/dist/buefy.css'
 Vue.use(Table)
+Vue.use(Button)
 
 Vue.config.productionTip = false
 

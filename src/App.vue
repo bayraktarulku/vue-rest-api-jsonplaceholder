@@ -5,7 +5,7 @@
       <button @click=fetchSomeData()>fetchData</button>
     </div>
     <div v-else-if="selected==='data-table'" class="container">
-      <button @click=indexPageOnclick()>Back</button>
+      <b-button type="is-dark" size="is-small" @click=indexPageOnclick()>Back</b-button>
       <b-table :data="message" :columns="columns"></b-table>
     </div>
   </div>
