@@ -1,6 +1,7 @@
 import Vue from 'vue'
 import App from './App.vue'
 
+
 // Buefy => To use all the features
 // import Buefy from 'buefy'
 // import 'buefy/dist/buefy.css'
