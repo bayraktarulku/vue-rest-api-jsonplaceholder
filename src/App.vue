@@ -1,7 +1,13 @@
 <template>
   <div id="app">
     <div v-if="selected==='index'" class="container">
-      XXXX
+<!--       <b-field label="Select datetime">
+        <b-datetimepicker
+            placeholder="Type or select a date..."
+            icon="calendar-today"
+            editable>
+        </b-datetimepicker>
+      </b-field> -->
       <button @click=fetchSomeData()>fetchData</button>
     </div>
     <div v-else-if="selected==='data-table'" class="container">
@@ -16,6 +22,7 @@ export default {
   name: 'app',
   data() {
     return {
+      datetime: new Date(),
       selected: 'index',
       message: [],
       columns: [{field: 'id', label: 'ID'},

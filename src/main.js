@@ -10,9 +10,12 @@ import App from './App.vue'
 // To use table the features
 import Table from 'buefy/dist/components/table'
 import Button from 'buefy/dist/components/button'
+// for Datetimpicker
+// import Buefy from 'buefy'
 import 'buefy/dist/buefy.css'
 Vue.use(Table)
 Vue.use(Button)
+// Vue.use(Buefy)
 
 Vue.config.productionTip = false
 
