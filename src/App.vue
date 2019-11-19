@@ -29,16 +29,25 @@ export default {
     indexPageOnclick() {
       this.selected = 'index'
     },
+    getMessageDatacallback(resp) {
+      console.log(resp)
+      this.message = resp
+    },
     fetchSomeData(){
       this.selected = 'data-table'
-      fetch('http://localhost:3000/posts', {
-        method: 'GET'
-      })
-      .then(response => response.json())
-      .then(json => this.message = json)
+      getDataAsync('http://localhost:3000/posts')
+      .then(this.getMessageDatacallback);
     }
   },
   created(){
   }
 }
+
+async function getDataAsync(url)
+{
+  let response = await fetch(url);
+  let data = await response.json()
+  return data;
+}
+
 </script>
