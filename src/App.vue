@@ -31,7 +31,7 @@ export default {
     },
     fetchSomeData(){
       this.selected = 'data-table'
-      fetch('https://jsonplaceholder.typicode.com/todos', {
+      fetch('http://localhost:3000/posts', {
         method: 'GET'
       })
       .then(response => response.json())
